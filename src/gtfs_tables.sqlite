@@ -70,6 +70,7 @@ create table gtfs_stops (
   stop_region text,
   stop_postcode text,
   stop_country text,
+  wheelchair_boarding int,
 
   -- unofficial features
 
@@ -218,6 +219,7 @@ create table gtfs_trips (
   direction_id  int NOT NULL, --NOT NULL --REFERENCES gtfs_directions(direction_id),
   block_id text,
   shape_id text,
+  wheelchair_accessible int,
   -- unofficial features  
   trip_short_name text,
   FOREIGN KEY (route_id) REFERENCES gtfs_routes(route_id),
